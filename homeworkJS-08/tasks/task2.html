@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(confirm(`Почати тестування`)){
+
+    let visitorsOfWeek = [12, 55, 22, 14, 9, 17, 45]
+
+    function getDaysNumbersListLess20(arr) {
+        let daysNumbers = []
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 20) daysNumbers.push(i + 1)
+        }
+        return daysNumbers
+    }
+
+    function getMinVisitorDays(arr) {
+        const minVisitors = Math.min(...arr)
+        let minDays = []
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === minVisitors) minDays.push(i + 1)
+        }
+        return minDays
+    }
+     
+    function getMaxVisitorDays(arr) {
+        const maxVisitors = Math.max(...arr)
+        let maxDays = []
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === maxVisitors) maxDays.push(i + 1)
+        }
+        return maxDays
+    }
+
+    function getSum(arr, startIndex, endIndex, step = 1) {
+        let sum = 0
+        for (let i = startIndex - 1; i < endIndex; i += step) {
+          sum += arr[i]
+        }
+        return sum
+      }
+
+    const workingDaysSum = getSum(visitorsOfWeek, 1, 5)
+    
+    const weekendDaysSum = getSum(visitorsOfWeek, 6, 7)
+
+    const daysNumbersLess20 = getDaysNumbersListLess20(visitorsOfWeek)
+
+    const minVisitorDays = getMinVisitorDays(visitorsOfWeek)
+
+    const maxVisitorDays = getMaxVisitorDays(visitorsOfWeek)
+
+
+
+    document.write(
+        `Номери днів, коли кількість відвідувачів була меншою за 20: ${daysNumbersLess20}</br>`
+    )
+    document.write(
+        `Номери днів, коли кількість відвідувачів була мінімальною: ${minVisitorDays}</br>`
+    )
+    document.write(
+        `Номери днів, коли кількість відвідувачів була максимальною: ${maxVisitorDays}</br>`
+    )
+    document.write(
+        `Загальна кількість клієнтів у робочі дні: ${workingDaysSum}</br>`
+    )
+    document.write(
+        `Загальна кількість клієнтів у вихідні дні: ${weekendDaysSum}</br>`
+    )
+    }
+    </script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>
+

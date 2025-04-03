@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(confirm(`Почати тестування`)){
+            const payments = [1553.97, 1596.44, 1640.58, 1276.68, 495.75, 520.96, 400.91, 559.87, 808.49, 542.79, 563.93, 1259.13] 
+
+            function getSumParticle (arr, startNum, endNum) {
+                let sum = 0
+                for (i = startNum; i<= endNum; i++){sum += arr[i]}
+                return sum
+            }
+            const totalYearSum = getSumParticle(payments, 0, 11)
+            document.write(`Сума за рік: ${totalYearSum.toFixed(2)}</br>`)
+
+            const firstHalfYearSum = getSumParticle(payments, 0, 5)
+            document.write(
+            `Сума за першу половину року: ${firstHalfYearSum.toFixed(2)}</br>`)
+
+            const secondHalfYearSum = getSumParticle(payments, 6, 11)
+            document.write(
+            `Сума за другу половину року: ${secondHalfYearSum.toFixed(2)}</br>`)
+
+            const summerSum = getSumParticle(payments, 5, 7)
+            document.write(`Сума за літо: ${summerSum.toFixed(2)}</br>`)
+
+            const secondQuarterSum = getSumParticle(payments, 3, 5)
+            document.write(
+            `Сума за ІІ квартал: ${secondQuarterSum.toFixed(2)}</br>`)
+
+            function getSumSteps (arr, startNum, step) {
+                let sum = 0
+                for (let i = startNum; i < arr.length ; i+=step){
+                    sum += arr[i]
+                }
+                return sum
+            }
+
+            const evenMonthsSum = getSumSteps(payments, 1, 2)
+            document.write(
+            `Сума парних місяців року: ${evenMonthsSum.toFixed(2)}</br>`)
+
+            const firstMonthOfSeasonSum = getSumSteps(payments, 2, 3)
+            document.write(
+            `Сума за перші місяці сезонів: ${firstMonthOfSeasonSum.toFixed(2)}</br>`)
+        }
+    </script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>

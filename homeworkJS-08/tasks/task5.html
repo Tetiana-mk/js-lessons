@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(confirm(`Почати тестування`)){
+          
+            function inputMarks(marksNumber) {
+        let marksList = [];
+        for (let i = 0; i < marksNumber; i++) {
+            const mark = parseInt(prompt("введіть оцінку (2-5)"))
+            marksList.push(mark);
+        }
+        return marksList
+    }
+    
+    function sortingGradesOfFivepointSystem(marksList){
+        let countTwos = 0
+        let countGood = 0
+        let countBelowAverage = 0
+        for (let i = 0; i < marksList.length; i++) {
+            if (marksList[i] === 2) countTwos++
+            if (marksList[i] <= 3) countBelowAverage++
+            if (marksList[i] >= 4) countGood++
+        }
+        
+        return { 
+            countTwos,
+            countGood,
+            countBelowAverage}
+            
+        }
+
+        let marksNumber = parseInt(prompt("Введіть кількість оцінок "))
+        marksList = inputMarks(marksNumber)
+        let result = sortingGradesOfFivepointSystem(marksList)
+        
+        document.write(`Ваші оцінки - ${marksList} <br> кількість двійок: ${result.countTwos}<br> кількість хороших оцінок (добре, відмінно): ${result.countGood}  <br> кількість оцінок, які нижче середнього: ${result.countBelowAverage}`)
+    }
+        </script>
+    <br>
+    <a href="../index.html">назад</a>   
+</body>
+</html>
