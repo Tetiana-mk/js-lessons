@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    if(confirm(`Почати тестування`)){
+
+
+        let carNumbers = [`AM 8522 HM`, `CB 1675 EB`, `AM 7777 TT`, `AX 1488 AP`, `CB 9678 EO`, `AC 3316 CK`]
+
+        function findElementsByFirstLetter (arr, letter) {
+            let array = arr.filter((el) => el[0] === letter)
+            return array
+        }
+
+        document.write(findElementsByFirstLetter(carNumbers, `A`))
+
+    }
+</script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(confirm(`Почати тестування`)){
+
+            function createArr( length, firstHalf,secondHalf){
+                const arr = new Array(length)
+                const half = Math.floor(length / 2)
+                arr.fill(firstHalf, 0, half)
+                arr.fill(secondHalf,half)
+                return arr
+            }
+
+            let lengthOfArray = parseInt(prompt(`Введіть кількість елементів`,`9`))
+
+        document.write(createArr(lengthOfArray, firstHalf = 1, secondHalf = 7))
+
+    }
+        </script>
+    <br>
+    <a href="../index.html">назад</a>   
+</body>
+</html>

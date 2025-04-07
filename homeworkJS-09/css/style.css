@@ -1,0 +1,40 @@
+/* Підключення фрифтів */
+
+/* Google Fonts (Plugin) */
+/* @import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+/* Локальне підключення шрифтів */
+@import url("fonts.css");
+
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+
+body {
+    margin: 30px;
+}
+h2 {
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+
+h1 {
+    color: brown;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+h2:hover {
+    color: blue;
+    font-size: 26px;
+}
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    if(confirm(`Почати тестування`)){
+
+        let prices = [100, 905, 5000, 13000, 1700, 165, 180]
+
+
+        function getDiscountForPricesOver1000(array, numMultiply){
+            array.forEach((el, ind, arr) => {
+            if (el > 1000) arr[ind] *= numMultiply
+        })
+        return array
+    }
+      document.write(getDiscountForPricesOver1000(prices, 0.7))
+
+    }
+</script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>

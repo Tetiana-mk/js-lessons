@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(confirm(`Почати тестування`)){
+
+            const elArr = [200, 30, 306, 49, 504, 34, 908]
+
+            function showArrElemsBigger100(arr) {
+                for( let element of arr) {
+                    if(element > 100)
+                    document.write(`${element}, `)
+                }
+            }
+        document.write(showArrElemsBigger100(elArr))
+        }
+    </script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>

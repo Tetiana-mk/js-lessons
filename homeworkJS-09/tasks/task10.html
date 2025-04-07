@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    if(confirm(`Почати тестування`)){
+
+        let prices = [100, 905, 5000, 13000, 1700, 165, 180]
+
+        function createArrTax(listPrice, tax) {
+        let arrTax = listPrice.map((price) => price * tax)
+        return arrTax
+    }
+
+        document.write(createArrTax(prices, 0.2))
+
+    }
+</script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>

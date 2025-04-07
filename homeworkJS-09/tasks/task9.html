@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    if(confirm(`Почати тестування`)){
+
+
+      let names = ['Іван','Тетяна','Іван','Анжела','Петро','Христина','Іван','Злата',]
+
+      function createFirstLettersArr (arr) {
+        const firstLettersArray = names.map((letter) => letter[0])
+        return firstLettersArray
+      } 
+      document.write(createFirstLettersArr(names))
+
+    }
+</script>
+    <br>
+    <a href="../index.html">назад</a>
+</body>
+</html>
